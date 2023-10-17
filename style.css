@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #3498db, #ff6b6b);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+.default_info {
+  text-align: center;
+}
+
+.default_info img {
+  width: 60%;
+  object-fit: cover;
+  border-radius: 15px;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+
+.default_info img:hover {
+  transform: rotate(360deg);
+}
+
+.default_info h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.default_info h3 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: #555;
+}
+
+.weather_temp {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #ff6b6b;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Content section */
+.content_section {
+  padding: 20px;
+  text-align: center;
+}
+
+.content_section form {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.content_section form input {
+  width: 70%;
+  outline: none;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: inherit;
+  color: #333;
+  font-size: 1.2rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.content_section form input:hover {
+  background: #f4f4f4;
+  color: #666;
+}
+
+.content_section form button {
+  padding: 10px 15px;
+  background: #ff6b6b;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  transition: background 0.3s;
+}
+
+.content_section form button:hover {
+  background: #ff5252;
+}
+
+.day_info .content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.day_info .content .title {
+  font-weight: 600;
+  color: #333;
+}
+
+.list_content ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+.list_content ul li {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  transition: transform 0.3s, background 0.3s, color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.list_content ul li:hover {
+  transform: scale(1.05);
+  background: #ff6b6b;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: rotate 0.3s linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.list_content ul li img {
+  width: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.icons {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
